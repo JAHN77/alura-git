@@ -1,0 +1,65 @@
+<meta charset="UTF-8">
+
+<h3>JUEGO DE ADIVINACION</h3>
+
+<script>
+
+    function saltarLinea(){
+
+        document.write("<br>")
+        document.write("<br>")
+       
+
+    }
+
+    function imprimir(frase){
+
+        document.write(frase)
+        saltarLinea()
+        
+    }
+
+    var rango=parseInt(prompt("Ingrese el rango de el sorteo:"))
+    var numero=Math.round(Math.random()*rango);
+    var intentos=5
+
+
+    while(true){
+
+        var user=parseInt(prompt("Ingrese un numero del 1 al " + rango))
+        
+        if (user==numero){
+
+            alert("numero correcto")
+            break
+        }
+
+
+        if(user>numero){
+
+            intentos=intentos-1
+            alert("El numero es menor a " + user + "; Te quedan: " + (intentos))
+
+        }
+
+        if(user<numero){
+
+            intentos=intentos-1
+            alert("El numero es mayor a " + user + "; Te quedan: " + (intentos))
+            
+        }
+
+        if (intentos == 0){
+            alert("Perdiste...")
+            break
+        }
+        
+        
+        
+    }
+
+    // for(var numero=1;numero < 10;numero++){
+
+    //     imprimir(numero)
+    // }
+</script>

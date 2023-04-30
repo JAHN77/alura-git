@@ -1,0 +1,72 @@
+<meta charset="UTF-8">
+
+<h3>Calcular IMC</h3>
+
+<script>
+
+    function saltarLinea(){
+
+        document.write("<br>")
+        document.write("<br>")
+       
+
+    }
+
+    function imprimir(frase){
+
+        document.write(frase)
+        saltarLinea();
+        
+    }
+
+    function diferenciaEdad(edad1,edad2){
+
+        document.write("<big>Nuestra diferencia de edad es de:</big> " + (edad1-edad2) );
+        saltarLinea();
+    }
+
+    function imc(peso=prompt("Informe su peso: "),altura=prompt("Informe su altura: "),nombre=prompt("Informe su nombre: ")){
+
+        imc=peso/(altura**2);
+        document.write("<strong>El IMC de " + nombre + " es de: </strong>" + imc)
+        saltarLinea()
+
+        
+        
+        if(imc < 18.5){
+
+             imprimir("Insuficiencia ponderada")
+
+        }
+
+        if (imc >= 18.5 && imc < 25 ){
+
+            imprimir("Normal")
+
+        }
+
+        if(imc>=25){
+
+            imprimir("Sobrepeso")
+        }
+
+        if(imc >= 30){
+
+            imprimir("Obesidad")
+
+        }
+
+
+
+
+    }
+
+    
+    imc()
+    // var txt="2004";
+    // txt=parseInt(txt)
+    // parsInt((txt));e
+    // document.write((txt + 10));
+
+
+</script>

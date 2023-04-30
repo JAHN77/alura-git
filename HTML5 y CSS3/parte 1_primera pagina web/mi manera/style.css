@@ -1,0 +1,42 @@
+body{
+    background-color: #CCCCCC;
+}
+.titulo1{
+    padding-left: 30px;
+}
+
+p{
+    text-align: center;
+
+}
+img{
+
+    width: 100%;
+    height: 500px;
+}
+
+em strong{
+    color: red;
+}
+
+h2{
+    text-align: center;
+}
+
+ul{
+    display:inline-block;
+    vertical-align:top ;
+    width: 20%;
+    margin-right: 15%;
+
+
+}
+
+.lista{
+    font-size: 30px;
+}
+
+#imagen2{
+    width: 50%;
+}
+

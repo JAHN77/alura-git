@@ -1,0 +1,72 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var puedoDibujar = false;
+    var color = "blue"
+    var x= 0
+    var y=0
+
+    function PaletaColores(c1,c2,c3){
+
+        pincel.fillStyle= c1
+        pincel.fillRect(0,0,50,50)
+        
+
+        pincel.fillStyle= c2
+        pincel.fillRect(50,0,50,50)
+        
+
+        pincel.fillStyle= c3
+        pincel.fillRect(100,0,50,50)
+        
+
+    }
+
+    function dibujarCirculo(evento) {
+
+        if(puedoDibujar) {
+            var x = evento.pageX - pantalla.offsetLeft;
+            var y = evento.pageY - pantalla.offsetTop;
+            pincel.fillStyle = color;
+            pincel.beginPath();
+            pincel.arc(x, y, 5, 0, 2 * 3.14);
+            pincel.fill();
+        }
+
+    }
+
+    pantalla.onmousemove = dibujarCirculo;
+
+    function habilitarDibujar() {
+
+        puedoDibujar = true;
+    }
+
+    function deshabilitarDibujar() {
+
+        puedoDibujar = false;
+    }
+
+    pantalla.onmousedown = habilitarDibujar;
+
+    pantalla.onmouseup = deshabilitarDibujar;
+
+    PaletaColores("red","blue","yellow")
+
+    function CambioColor(){
+        
+        
+
+
+    }
+
+    pincel.onclick=CambioColor
+
+
+</script>
